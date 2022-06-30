@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useEffect } from "react";
 const Users = () => {
   const [users, setUsers] = useState();
 
@@ -10,8 +11,11 @@ const Users = () => {
 
   }
 
-//   getUsers();
-//    console.log(users);
+useEffect(() => {
+    getUsers();
+  
+  }, [])
+console.log(users);
 
   return (
     <div>
